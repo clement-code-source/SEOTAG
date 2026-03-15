@@ -21,7 +21,7 @@ export default function App() {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.put("http://localhost:5000/api/ai/category", product);
+    const res = await axios.put("https://seotag-4.onrender.com/api/ai/category", product);
 
     setTags(res.data.product.aiInfo.seoTags || []);
     console.log(res.data.product.aiInfo.seoTags);
